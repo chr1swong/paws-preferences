@@ -62,7 +62,7 @@ export const CatCard: React.FC<CatCardProps> = ({ cat, onSwipe, isTop }) => {
   };
 
   const rotation = currentX * 0.1;
-  const opacity = 1 - Math.abs(currentX) / 300;
+  // const opacity = 1 - Math.abs(currentX) / 300;
 
   return (
     <div

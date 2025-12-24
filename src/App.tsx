@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Cat } from './types';
 import { fetchCats } from './api';
 import { CatCard } from './components/CatCard';
