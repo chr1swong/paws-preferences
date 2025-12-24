@@ -70,11 +70,11 @@ function App() {
   return (
     <div className="h-screen bg-gradient-to-br from-pink-50 via-orange-50 to-pink-100 flex flex-col overflow-hidden">
       {/* Header */}
-      <header className="p-4 text-center flex-shrink-0">
+      <header className="px-4 pt-4 pb-2 text-center flex-shrink-0">
         <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600">
           Paws&Preference
         </h1>
-        <p className="text-gray-600 mt-1 text-sm">
+        <p className="text-gray-600 mt-1 text-sm font-bold">
           {currentIndex + 1} / {cats.length}
         </p>
       </header>
@@ -90,6 +90,18 @@ function App() {
               isTop={index === 0}
             />
           ))}
+        </div>
+      </div>
+
+      {/* Swipe Instructions */}
+      <div className="flex justify-between px-8 max-w-md mx-auto w-full flex-shrink-0">
+        <div className="flex items-center gap-1 text-sm font-bold text-gray-700">
+          <span className="text-2xl">←</span>
+          <span>Swipe to dislike</span>
+        </div>
+        <div className="flex items-center gap-1 text-sm font-bold text-gray-700">
+          <span>Swipe to like</span>
+          <span className="text-2xl">→</span>
         </div>
       </div>
 
