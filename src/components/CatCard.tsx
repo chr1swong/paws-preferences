@@ -90,7 +90,7 @@ export const CatCard: React.FC<CatCardProps> = ({ cat, onSwipe, isTop }) => {
         <img
           src={cat.imageUrl}
           alt="Cat"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover block"
           onLoad={() => setImageLoaded(true)}
           draggable="false"
         />

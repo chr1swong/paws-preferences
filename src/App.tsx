@@ -70,18 +70,18 @@ function App() {
   return (
     <div className="h-screen bg-gradient-to-br from-pink-50 via-orange-50 to-pink-100 flex flex-col overflow-hidden">
       {/* Header */}
-      <header className="px-4 pt-4 pb-2 text-center flex-shrink-0">
+      <header className="px-4 pt-3 pb-1 text-center flex-shrink-0">
         <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600">
           Paws&Preference
         </h1>
-        <p className="text-gray-600 mt-1 text-sm font-bold">
+        <p className="text-gray-600 mt-2 text-sm font-bold">
           {currentIndex + 1} / {cats.length}
         </p>
       </header>
 
       {/* Card Stack */}
-      <div className="flex-1 flex items-center justify-center px-4 min-h-0">
-        <div className="relative w-full max-w-md h-full max-h-[60vh] aspect-[3/4]">
+      <div className="flex justify-center px-4 flex-shrink-0">
+        <div className="relative w-full max-w-md h-full max-h-[70vh] aspect-[3/4] mt-4">
           {cats.slice(currentIndex, currentIndex + 2).map((cat, index) => (
             <CatCard
               key={cat.id}
@@ -94,7 +94,7 @@ function App() {
       </div>
 
       {/* Swipe Instructions */}
-      <div className="flex justify-between px-8 max-w-md mx-auto w-full flex-shrink-0">
+      <div className="flex justify-between px-8 max-w-md mx-auto w-full flex-shrink-0 pb-4 pt-4">
         <div className="flex items-center gap-1 text-sm font-bold text-gray-700">
           <span className="text-2xl">←</span>
           <span>Swipe to dislike</span>
@@ -103,24 +103,6 @@ function App() {
           <span>Swipe to like</span>
           <span className="text-2xl">→</span>
         </div>
-      </div>
-
-      {/* Action Buttons */}
-      <div className="p-4 pb-6 flex justify-center items-center gap-8 flex-shrink-0">
-        <button
-          onClick={() => handleButtonClick(false)}
-          className="w-20 h-20 rounded-full bg-white shadow-lg hover:shadow-xl transition-all flex items-center justify-center border-4 border-gray-200 hover:scale-110 active:scale-95"
-          aria-label="Dislike"
-        >
-          <span className="text-4xl">😿</span>
-        </button>
-        <button
-          onClick={() => handleButtonClick(true)}
-          className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 shadow-lg hover:shadow-xl transition-all flex items-center justify-center hover:scale-110 active:scale-95"
-          aria-label="Like"
-        >
-          <span className="text-4xl">❤️</span>
-        </button>
       </div>
     </div>
   );
