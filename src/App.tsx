@@ -44,10 +44,6 @@ function App() {
     }
   };
 
-  const handleButtonClick = (liked: boolean) => {
-    handleSwipe(liked ? 'right' : 'left');
-  };
-
   const handleRestart = () => {
     loadCats();
   };
